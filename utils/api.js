@@ -16,7 +16,7 @@ export const analyzeFile = async (file) => {
   formData.append("file", file);
 
   try {
-    const response = await fetch("http://localhost:8000/analyze", {
+    const response = await fetch("https://fastapi-backend-9lje.onrender.com/analyze", {
       method: "POST",
       body: formData,
     });
@@ -51,7 +51,7 @@ export const sendChatMessage = async (message, datasetInfo) => {
   }
 
   try {
-    const response = await fetch("http://localhost:8000/chat", {
+    const response = await fetch("https://fastapi-backend-9lje.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -109,3 +109,4 @@ export const loadLayoutsFromServer = async () => {
   // Return an empty array as if no layouts were found on the server
   return [];
 };
+
