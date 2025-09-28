@@ -372,7 +372,7 @@ export default function Home() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8000/analyze", {
+      const res = await fetch("https://fastapi-backend-9lje.onrender.com/analyze", {
         method: "POST",
         body: formData,
       });
@@ -1302,4 +1302,5 @@ export default function Home() {
     </DndProvider>
   );
 }
+
 
